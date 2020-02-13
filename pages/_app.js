@@ -6,20 +6,21 @@ import { GitClient } from '@tinacms/git-client';
 class MyApp extends App {
   constructor() {
     super()
-    this.cms = new TinaCMS()
     const client = new GitClient('http://localhost:3000/___tina')
-    this.cms.registerApi('git', client)
+    this.cms = new TinaCMS({
+      apis: {
+        git: client,
+      },
+      sidebar: {
+        hidden: process.env.NODE_ENV === "production"
+      }
+    })
+  }
 
-  }
-  options = {
-    sidebar: {
-      hidden: process.env.NODE_ENV === "production"
-    }
-  }
   render() {
     const { Component, pageProps } = this.props
     return (
-      <Tina cms={this.cms} {...this.options.sidebar}>
+      <Tina cms={this.cms}>
         <Component {...pageProps} />
       </Tina>
     )
