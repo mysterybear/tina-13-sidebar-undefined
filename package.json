@@ -1,0 +1,33 @@
+{
+  "name": "with-tailwindcss-emotion",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@emotion/babel-preset-css-prop": "^10.0.27",
+    "@emotion/core": "10.0.17",
+    "@emotion/styled": "10.0.17",
+    "@tinacms/api-git": "^0.4.6",
+    "@tinacms/git-client": "^0.4.1",
+    "cors": "^2.8.5",
+    "emotion-tailwind-preflight": "^1.0.0",
+    "emotion-theming": "^10.0.27",
+    "express": "^4.17.1",
+    "moment": "^2.24.0",
+    "next": "^9.0.6",
+    "react": "16.10.1",
+    "react-dom": "16.10.1",
+    "styled-components": "^5.0",
+    "tinacms": "^0.13.0"
+  },
+  "devDependencies": {
+    "babel-plugin-emotion": "10.0.19",
+    "babel-plugin-macros": "2.6.1",
+    "tailwind.macro": "1.0.0-alpha.10",
+    "tailwindcss": "1.1.2"
+  }
+}
